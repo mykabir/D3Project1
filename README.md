@@ -1,7 +1,7 @@
 ## Project 1: Visualizing time series data
 Please click to watch the overview video.
 
-[![ScreenShot](http://mykabir.info/d3Project1/VideoTeaser.PNG(http://mykabir.info/)
+[![ScreenShot](http://mykabir.info/d3Project1/VideoTeaser.PNG)](http://mykabir.info/)
 
 Project 1: Visualizing time series data - is the first project of CS5331-004: Visualization and Visual Analytics - Fall 2016 course. Tommy Dang (Tuan Nhon Dang), is teaching this course. 
 
