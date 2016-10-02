@@ -1,31 +1,32 @@
-## TimeArcs: Visualizing Fluctuations in Dynamic Networks
+## Project 1: Visualizing time series data
 Please click to watch the overview video.
 
-[![ScreenShot](http://www.cs.uic.edu/~tdang/TimeArcs/EuroVis2016/VideoTeaser.png)](http://www.cs.uic.edu/~tdang/TimeArcs/EuroVis2016/TimeArcs_Dang_EuroVis2016.mp4)
+[![ScreenShot](http://mykabir.info/d3Project1/VideoTeaser.PNG(http://mykabir.info/)
 
-We introduce *TimeArcs*, a novel visualization technique for representing the dynamic relationships between entities in a network. In many application domains, relationships between entities are not temporally stable, which means that cluster structures and cluster memberships also may vary across time. Our technique provides a big picture overview of the most significant clusters over time. *TimeArcs* also supports a range of interactive features, such as allowing users to drill-down in order to see details about a particular cluster. To highlight the benefits of this technique, we demonstrate its application to various datasets, including the collocated popular phrases obtained from political blogs, IMDB co-star network, and  a dataset showing conflicting evidences within biomedical literature of protein interactions.  
+Project 1: Visualizing time series data - is the first project of CS5331-004: Visualization and Visual Analytics - Fall 2016 course. Tommy Dang (Tuan Nhon Dang), is teaching this course. 
 
-### Exploring Topics and Events in Political Blogs
-The following image shows the top 100 terms in nearly 100,000 political blog posts in last 10 years. Terms are color-coded by category as depicted on the top left. Terms appear together in political blogs are brought closer and connected by arcs. The arc thickness indicates the frequency of collocated terms. More details and source codes can be found [here](https://github.com/CreativeCodingLab/TimeArcs/tree/master/Text) or [online demo](http://www2.cs.uic.edu/~tdang/TimeArcs/Text/).
+I am fortunate that, I get a chance to work on this project.  It was amazing. I learn many things in last few days. 
 
-**Box A:** Viewers can quickly see the major political events such as the Sandy Hook Elementary School shooting or the 2011 shooting by Jared Loughner. Notice that the two events happened in Tucson and hence both are connected to this term. And this is why they are sitting closer on the vertical axis. 
+In this project, I tried to show the unemployment rate of the different states of the USA from 1978 to 2016. The data is available in Bureau of Labor and Statistics. 
 
-**Box B:** In the blogs about Ferguson and Michael Brown in 2014, the name Trayvon Martin is often mentioned due to the similar nature of the two events. 
+There were many tasks in the project. As I am new in D3 and I had a little time I tried to complete some important tasks. 
 
-**Box C:** Some relationships last for long period of time. For example, the term Edward Snowden and NSA suddenly became highly correlated when he (Snowden) was the principal source of disclosures about top-secret National Security Agency programs in [June 2013](https://www.washingtonpost.com/politics/intelligence-leaders-push-back-on-leakers-media/2013/06/09/fff80160-d122-11e2-a73e-826d299ff459_story.html). The relation fades out within a year.
+In my project, you can get a quick idea of the present unemployment condition as well as from 1978. It will be easy to compare the rate in the different year. A viewer also can zoom in quickly to check last 12 month, 5 years, 10 Years, 20 years or all the data of any state. 
+More details and source codes can be found [here](https://github.com/mykabir/D3Project1) or [online demo](http://mykabir.info/d3Project1/).
 
-![ScreenShot](https://github.com/CreativeCodingLab/TimeArcs/blob/master/Text/images/PoliticalBlogs1.png)
 
-### Finding Patterns in the IMDB Co-Star Network
-The following image shows TimeArcs visualization for the top 100 actors from [IMDB database](http://www.imdb.com/interfaces) in movies rated 8 stars or higher from 1955 to 2014. Arcs connect co-actors in the same movies and color-coded by movie genres: green for comedy, red for action, blue for drama. More examples and source codes can be found [here](https://github.com/CreativeCodingLab/TimeArcs/tree/master/IMDB) or [online demo](http://www2.cs.uic.edu/~tdang/TimeArcs/IMDB/).
+I would like to show some interesting finding from the chart. From the graph, we can easily get an idea about the change of unemployment rate of different decades. 
 
-![ScreenShot](https://github.com/CreativeCodingLab/TimeArcs/blob/master/IMDB/images/IMDB1.png)
+### In every January, February, and March Montana states unemployment rate became higher than any other months. January is the highest! 
+![ScreenShot](http://mykabir.info/d3Project1/montana.PNG)
 
-### Evidence in Biological Pathway Literature
-The following image shows TimeArcs visualization for Pathway Commons index cards. Time axis goes from left (2002) to right (2014). An arc connects two proteins/complexes at a particular time (based on when the interaction was discovered/ publication year). The colors encode interaction types: green for adds_modification, red for removes_modification, blue for translocation, orange for binds, and pink for increases. A black (and usually thicker) arc indicates multiple interactions between two proteins/complexes which are discovered in the same year. More details and source codes can be found [here](https://github.com/CreativeCodingLab/TimeArcs/tree/master/IndexCards) or [online demo](http://www2.cs.uic.edu/~tdang/TimeArcs/IndexCards/).
+### Michigan state encountered the highest unemployment rate (17.3) in January 1983. In July 2009 it again faced the worse condition in last decades. It was 15.4.
+![ScreenShot](http://mykabir.info/d3Project1/Michigan.PNG)
 
-![ScreenShot](https://github.com/CreativeCodingLab/TimeArcs/blob/master/IndexCards/images/PC1.png)
+
+### West Virginia had the highest unemployment in a month from January 1978 comparing to other states. In February 1983 the Unemployment rate was 20.4.
+![ScreenShot](http://mykabir.info/d3Project1/WV.PNG)
 
 ### Acknowledgments
-This work was funded by the DARPA Big Mechanism Program under ARO contract WF911NF-14-1-0395.
+This project work is given by Dr. Tommy Dang. I am grateful to him for that. I learn much while working on this project. 
 
