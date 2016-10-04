@@ -73,11 +73,11 @@
 
 	    // D3 Projection
 	    var projection = d3.geo.albersUsa()
-	                       .translate([width/2, height/2])    // translate to center of screen
-	                       .scale([width]);          // scale things down so see entire US
+	                       .translate([width/2, height/2])    // Translate to screen center
+	                       .scale([width]);        			  // scale things down
 
 	    // Define path generator
-	    var path = d3.geo.path()               // path generator that will convert GeoJSON to SVG paths
+	    var path = d3.geo.path()               // Path generator to convert GeoJSON to SVG plot
 	                 .projection(projection);  // tell path generator to use albersUsa projection
 	    
 	    //Create SVG element and append map to the SVG
@@ -101,7 +101,7 @@
     
     d3.json("data/us-states.json", function(json) {
       
-    // Bind the data to the SVG and create one path per GeoJSON feature
+    // Bind the data to the SVG 
     mapSvg.selectAll("path")
         .data(json.features)
         .enter()
@@ -126,7 +126,7 @@
 		var bar_width = 2;
 		var csv_data = [];
 
-		d3.csv("data/unemployment.csv", function(d) {
+		d3.csv("data/unemployment.csv", function(d) {  // Reading data from CSV
 			return {
 				year : +d.Year,
 				month : d.Month,
@@ -136,11 +136,11 @@
 			}, function(data) {
 
 			console.log(data.length);
-			csv_data = data;
+			csv_data = data;                 // Storing CSV data
 
 			var all_states = [];
 
-			data.forEach(function(d,i){
+			data.forEach(function(d,i){              // States
 				if(all_states.indexOf(d.state)<0)
 				{
 					all_states.push(d.state);
@@ -152,7 +152,7 @@
 			var state_select_options = [select_state_default_prompt];
 			state_select_options = state_select_options.concat(all_states);
 
-			var state_selection = d3.select("#select_state")
+			var state_selection = d3.select("#select_state")    // Populate select option
 			  .selectAll("option")
 			  .data(state_select_options);
 			  
@@ -182,7 +182,7 @@
 		});		
 
 
-		var show_state_data = function(state)
+		var show_state_data = function(state)  // Function for showing reconstruct chart based on States
 		{
 			var state_data = csv_data.filter(function(d) {return d.state == state});
 
@@ -192,7 +192,7 @@
 
 			var period = parseInt($('.radio-selector').find('.checked').attr('data-value'));
 			
-			switch(period)
+			switch(period)   // Slicing the time period
 			{
 				case 0: //12 months' data only
 					state_data = state_data.slice(-12);
@@ -228,7 +228,7 @@
 
 	
 
-			var plotter = d3.select('#plotter')
+			var plotter = d3.select('#plotter') // For showing sliced time scale data
 							.style('width', (state_data.length * bar_width) + "px" )
 						    .selectAll('div')
 						    .data(state_data)
@@ -247,7 +247,7 @@
 					  		    	return;
 				  		    	})
 			
-			plotter.enter().append('div')
+			plotter.enter().append('div')  // For showing data of all times.
 						    .style('width', function(d){return bar_width + "px"})
 						    .style('height', function(d){return h_scaler(d.u_rate) + "px"})
 						  	.style('left', function(d,i){return (i*bar_width) + "px"})
@@ -267,7 +267,7 @@
 	</script>
 
 	<script type="text/javascript">
-	$(document).ready(function(){
+	$(document).ready(function(){  // Code for chaging data on selecting states
 		$('.radio').click(function(e)
 		{
 			var r = $(this);
